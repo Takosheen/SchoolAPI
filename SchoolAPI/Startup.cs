@@ -14,6 +14,7 @@ using NLog;
 using System.IO;
 using SchoolAPI.Extensions;
 using AutoMapper;
+using Microsoft.OpenApi.Models;
 
 namespace SchoolAPI
 {
@@ -35,6 +36,13 @@ namespace SchoolAPI
             services.ConfigureSqlContext(Configuration);
             services.ConfigureRepositoryManager();
             services.AddAutoMapper(typeof(Startup));
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+            });
+
+
             services.AddControllers();
 
         }
@@ -46,6 +54,11 @@ namespace SchoolAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
 
             app.UseHttpsRedirection();
 
