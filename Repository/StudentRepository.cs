@@ -22,5 +22,15 @@ namespace Repository
         public Student GetStudent(Guid companyId, bool trackChanges) =>
             FindByCondition(c => c.Id.Equals(companyId), trackChanges)
                 .SingleOrDefault();
+        public void CreateStudent(Student student) => Create(student);
+        public IEnumerable<Student> GetByIds(IEnumerable<Guid> ids, bool trackChanges) =>
+            FindByCondition(x => ids.Contains(x.Id), trackChanges)
+            .ToList();
+
+
+        public void DeleteStudent(Student student)
+        {
+            Delete(student);
+        }
     }
 }
