@@ -13,6 +13,7 @@ namespace Entities.Models
 
         [Required(ErrorMessage = "Course name is a required field.")]
         [MaxLength(60, ErrorMessage = "Maximum length for the Name is 60 characters.")]
+        [MinLength(0, ErrorMessage = "Name cannot be empty.")]
         public string CourseName { get; set; }
 
         public ICollection<Student> Students { get; set; }
