@@ -50,7 +50,7 @@ namespace SchoolAPI.Controllers
         {
             if (course == null)
             {
-                _logger.LogError("CourseCreationDto object sent from client is null.");
+                _logger.LogError("CourseCreationDto object sent from client is null");
                 return BadRequest("CourseCreationDto object is null");
             }
             if (!ModelState.IsValid)
