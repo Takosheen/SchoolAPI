@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using NLog;
 using System.IO;
 using SchoolAPI.Extensions;
+using AutoMapper;
 
 namespace SchoolAPI
 {
@@ -33,7 +34,9 @@ namespace SchoolAPI
             services.ConfigureLoggerService();
             services.ConfigureSqlContext(Configuration);
             services.ConfigureRepositoryManager();
+            services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
