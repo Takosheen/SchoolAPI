@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Cont
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{D7F5F646-AB9C-4B37-A544-376FA5E16137}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{69FAF8FC-3E79-4407-8ADF-4CB8E44B9DC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{69FAF8FC-3E79-4407-8ADF-4CB8E44B9DC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{F6E52DC6-E604-4B82-B6D4-7E2BD401065E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{F6E52DC6-E604-4B82-B6D4-7E2BD401065E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorHandler", "GlobalErrorHandling\ErrorHandler.csproj", "{205543D3-796C-4A18-BA72-54E0B7436F56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F6E52DC6-E604-4B82-B6D4-7E2BD401065E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6E52DC6-E604-4B82-B6D4-7E2BD401065E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6E52DC6-E604-4B82-B6D4-7E2BD401065E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{205543D3-796C-4A18-BA72-54E0B7436F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205543D3-796C-4A18-BA72-54E0B7436F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205543D3-796C-4A18-BA72-54E0B7436F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205543D3-796C-4A18-BA72-54E0B7436F56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
