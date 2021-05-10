@@ -28,7 +28,7 @@ namespace SchoolAPI.Controllers
         {
             var courses = _repository.Course.GetAllCourses(trackChanges: false);
             var courseDto = _mapper.Map<IEnumerable<CourseDto>>(courses);
-            throw new Exception("Exception");
+            //throw new Exception("Exception");
             return Ok(courseDto);
         }
 

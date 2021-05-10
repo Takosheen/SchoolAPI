@@ -44,7 +44,14 @@ namespace SchoolAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
+            services.AddControllers(config =>
+            {
+                config.RespectBrowserAcceptHeader = true;
+                config.ReturnHttpNotAcceptable = true;
 
+            }).AddXmlDataContractSerializerFormatters()
+            .AddCourseOutputFormatter()
+            .AddStudentOutputFormatter();
 
             services.AddControllers();
 
